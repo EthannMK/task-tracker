@@ -10,6 +10,7 @@
   --personal: #4f8cff;
   --learning: #b17cf0;
   --company: #2fae72;
+  --meeting: #f2994a;
   --danger: #e3350d;
   --radius: 10px;
   --pixel-font: 'Press Start 2P', monospace;
@@ -195,6 +196,13 @@ body {
 .task-form textarea { grid-column: 1 / -1; }
 .task-form button { grid-column: 1 / -1; }
 
+.meeting-fields {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 8px;
+}
+
 input, select, textarea, button {
   background: #fff;
   border: 2.5px solid var(--ink);
@@ -279,6 +287,7 @@ button:active { transform: translate(2px, 2px); box-shadow: none; }
 .icon-category.personal { color: var(--personal); }
 .icon-category.learning { color: var(--learning); }
 .icon-category.company { color: var(--company); }
+.icon-category.meeting { color: var(--meeting); }
 
 .task-title { font-weight: 700; font-size: 15px; }
 
@@ -346,6 +355,18 @@ button:active { transform: translate(2px, 2px); box-shadow: none; }
 
 .agenda-item.gcal { border-left: 5px solid var(--yellow); }
 .agenda-item.task { border-left: 5px solid var(--green); }
+
+.agenda-item-right { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+
+.mini-btn {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  padding: 5px 8px;
+  background: var(--green);
+  color: #fff;
+  border-color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
 
 section#tab-settings {
   background: var(--panel);

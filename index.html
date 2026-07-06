@@ -83,6 +83,7 @@
           <option value="Personal">Personal</option>
           <option value="Learning">Learning</option>
           <option value="Company">Company</option>
+          <option value="Meeting">Meeting</option>
         </select>
         <select id="f-priority">
           <option value="low">Low</option>
@@ -91,6 +92,11 @@
         </select>
         <input type="date" id="f-due">
         <input type="text" id="f-project" placeholder="Project path or link (optional)">
+        <div id="meeting-fields" class="meeting-fields hidden">
+          <input type="time" id="f-time" placeholder="Start time">
+          <input type="number" id="f-duration" placeholder="Duration (min)" min="5" step="5">
+          <input type="text" id="f-participants" placeholder="Participants (emails, comma-separated)">
+        </div>
         <textarea id="f-notes" placeholder="Notes (optional)" rows="1"></textarea>
         <button type="submit">Add task</button>
       </form>
@@ -101,6 +107,7 @@
           <button data-value="Personal" class="chip">Personal</button>
           <button data-value="Learning" class="chip">Learning</button>
           <button data-value="Company" class="chip">Company</button>
+          <button data-value="Meeting" class="chip">Meeting</button>
         </div>
         <div class="filter-group" id="filter-status">
           <button data-value="all" class="chip active">All</button>

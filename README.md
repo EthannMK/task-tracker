@@ -54,11 +54,17 @@ events also show up read-only in the Agenda view for context.
 
 ## Features
 
-- Tasks tagged **Personal / Learning / Company**, with status
+- Tasks tagged **Personal / Learning / Company / Meeting**, with status
   (to do / doing / done) and priority
 - Filter by category, status, and free-text search
 - Optional project path/link per task (opens a local folder/file or URL)
-- Agenda view combining task due dates with upcoming Google Calendar events
+- **Meeting** tasks get extra fields — start time, duration, and
+  participant emails. These sync to Google Calendar as a real timed
+  event with attendees invited (`sendUpdates=all`), instead of an
+  all-day placeholder
+- Agenda view combining task due dates with upcoming Google Calendar
+  events; any Google Calendar event can be pulled in with **+ Add as
+  task**, which captures its time, duration, and attendees automatically
 - Export/import all tasks as JSON for backup or moving between machines
 - Everything else works fully offline with zero setup
 
